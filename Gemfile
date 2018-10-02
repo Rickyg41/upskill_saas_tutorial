@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.0.0'
+gem 'rails', '~> 5.0.0'
 # Use Puma as the app server
 gem 'puma', '3.4.0'
 # Use SCSS for stylesheets
@@ -28,15 +28,27 @@ gem 'jbuilder', '2.5.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# use Twitter Bootstrap Library for ront-end UI & Layout
+# Use Twitter Bootstrap library for front-end UI and layout
 gem 'bootstrap-sass', '3.3.7'
 
-# use font awesome sass gem for adding icons
-
+#Use Font Awesome Sass gem for adding icons
 gem 'font-awesome-sass', '4.6.2'
 
-#use hirb for better db table display in console
+#Use Hirb for better database table display on console
 gem 'hirb', '0.7.3'
+
+#Use Devise for user authentication
+gem 'devise', '4.2.0'
+
+#Use Stripe for payment processing
+gem 'stripe', '1.48.0'
+
+#Use Figaro for ENV variables
+gem 'figaro', '1.1.1'
+
+#Use Paperclip for image upload
+gem 'paperclip', '4.3.6'
+gem 'aws-sdk', '2.3'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
@@ -44,7 +56,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end
-
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
@@ -56,11 +67,10 @@ group :development do
 end
 
 group :production do
-  # use the PostgreSQL gem for Heroku production servers
+  # Use the PostgreSQL gem for Heroku production servers
   gem 'pg', '0.18.4'
-  gem 'puma', '3.4.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-ruby '2.5.1'
+ruby '2.3.0'
